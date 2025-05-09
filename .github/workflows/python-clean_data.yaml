@@ -17,6 +17,7 @@ jobs:
 
                 - name: install dependencies
                   run: |
+                    pwd
                     cd ModelCleaning
                     pip install -r requirements.txt
 
