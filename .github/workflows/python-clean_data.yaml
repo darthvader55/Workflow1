@@ -27,5 +27,6 @@ jobs:
                   run: |
                     pwd
                     cd ModelCleaning
-                    pip install pandas
+                    pip install joblib
+                    pip install pandas 
                     python train_test_dataset.py
