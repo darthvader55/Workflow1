@@ -27,6 +27,6 @@ jobs:
                   run: |
                     pwd
                     cd ModelCleaning
-                    pip install joblib
+                    pip install joblib scikit-learn
                     pip install pandas 
                     python train_test_dataset.py
