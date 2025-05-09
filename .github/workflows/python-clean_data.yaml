@@ -30,3 +30,4 @@ jobs:
                     pip install joblib scikit-learn
                     pip install pandas 
                     python train_test_dataset.py
+                    ls -al
