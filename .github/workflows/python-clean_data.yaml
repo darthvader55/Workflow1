@@ -5,6 +5,7 @@ jobs:
         data_pipeline:
                 name: data_pipeline
                 runs-on: ubuntu-latest
+       
                 steps:
                 - name: setup python
                   uses: actions/setup-python@v4
@@ -14,20 +15,22 @@ jobs:
                 - name: checkout code
                   uses: actions/checkout@v4
 
+                - name: install dependencies
+                  run:
+                    cd ModelCleaning
+                    pip install -r requirements.txt
+
                 - name: clean_data
                   run: |
                     pwd
                     ls -al
                     pwd
                     cd ModelCleaning
-                    pip install pandas
                     python Cleandata.py
 
                 - name: train_test model
                   run: |
                     pwd
-                    cd ModelCleaning
-                    pip install joblib scikit-learn
-                    pip install pandas 
+                    cd ModelCleaning 
                     python train_test_dataset.py
                     ls -al
